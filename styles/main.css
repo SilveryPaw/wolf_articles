@@ -1,0 +1,35 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Calibri', Times, serif;
+}
+
+#header_block, #footer_block, #content_block{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+}
+
+#header_block{
+    grid-area: header;
+}
+
+
+#content_block{
+    grid-area: content;
+}
+
+#footer_block{
+    grid-area: footer;
+    text-align: center;
+}
