@@ -1,0 +1,9 @@
+.article, .canine{
+    border:2px;
+    border-style: solid;
+}
+
+.canine_img{
+    width: 20%;
+    height: auto;
+}
