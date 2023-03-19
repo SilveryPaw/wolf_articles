@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <link href="styles/main.css" rel="stylesheet">
+        <?php include_once "template/meta_data.php" ?>
     </head>
     <body id="body">
         <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
