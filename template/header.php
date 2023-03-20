@@ -9,8 +9,8 @@
         </ul>
         <div id="log_reg">
             <ul>
-                <li><a href="#">ВХОД</a></li>
-                <li><a href="#">РЕГИСТРАЦИЯ</a></li>
+                <li><a href="/wolf_articles/login.php">ВХОД</a></li>
+                <li><a href="/wolf_articles/register.php">РЕГИСТРАЦИЯ</a></li>
             </ul>
         </div>
     </div>
