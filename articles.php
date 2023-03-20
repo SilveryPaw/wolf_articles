@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include_once "template/meta_data.php" ?>
+        <?php include_once "template/meta_data.php" ?><!--Подключаем метаданные(стили, кодировку)-->
     </head>
     <body id="body">
         <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
