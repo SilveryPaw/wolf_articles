@@ -32,16 +32,16 @@ header("Content-Type: application/json");
 $data = json_decode(file_get_contents("php://input"));//Стандартная команда для получения данных
 //print_r($data);
 $user_name = $data->Name;
-$user_pword = $data->Password;
+$user_pword = password_hash($data->Password, PASSWORD_DEFAULT);
 $user_mail = $data->Email;
 if (is_registred())
 {
-    echo("Пользователь с таким именем или почтой уже зарегистрирован.");
+    echo("fail");
 }
 else
 {
     register_user();
-    echo("Пользователь успешно зарегистрирован. Вы можете авторизироваться");
+    echo("success");
 }
 $conn->close();
 ?>
