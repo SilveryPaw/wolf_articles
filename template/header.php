@@ -13,7 +13,7 @@
             {
             ?>
             <ul>
-                <li><a href="#"><?php echo $_SESSION["Uname"] ?></a></li>
+                <li><a href="/wolf_articles/profile.php"><?php echo $_SESSION["Uname"] ?></a></li>
                 <li><a href="/wolf_articles/scripts/logout.php">Выйти</a></li>
             </ul>
             <?php
