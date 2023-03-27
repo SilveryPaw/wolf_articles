@@ -2,7 +2,7 @@
     <?php foreach($result as $row)
     {?>
     <div class = "article">
-        <h1><?php echo $row["name"] ?></h1>
+        <h1><a href="/wolf_articles/show_article.php?id=<?php echo $row["id"]; ?>"><?php echo $row["name"] ?></a></h1>
         <p><?php 
         if(strlen($row["article_text"]) > 1000)
         {
