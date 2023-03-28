@@ -4,6 +4,21 @@ $username = $_SESSION["Uname"];
 $sql_articles = "SELECT * FROM `articles` WHERE `articles`.`author_id` = (SELECT `users`.`id` FROM `users` WHERE `users`.`username` = \"$username\")";
 $sql_forums = "SELECT * FROM `forums` WHERE `forums`.`author_id` = (SELECT `users`.`id` FROM `users` WHERE `users`.`username` = \"$username\")";
 
+function create_user_info_block($type, $result)
+{ 
+?>
+    <div class="result">
+        <?php foreach($result as $row)
+        {?>
+        <div class = "item">
+            <h3 class="item_name"><a href="/wolf_articles/show_<?php echo $type; ?>.php?id=<?php echo $row["id"]; ?>"><?php echo $row["name"] ?></a></h3>
+            <a href="scripts/delete_entry.php?table=<?php echo $type; ?>s&id=<?php echo $row["id"]; ?>">Удалить</a>       
+        </div>
+        <?php } ?>
+    </div>
+<?php 
+}
+
 $conn = new mysqli($host, $login, $password, $database);
 if($conn->connect_error)
 {
@@ -16,7 +31,7 @@ if($conn->connect_error)
     $result = mysqli_query($conn, $sql_articles);
     if($result->num_rows > 0)
     {
-        include_once 'create_user_info_block.php';
+        create_user_info_block("article", $result);
     }
     else
     {
@@ -27,7 +42,7 @@ if($conn->connect_error)
     $result = mysqli_query($conn, $sql_forums);
     if($result->num_rows > 0)
     {
-        include_once 'create_user_info_block.php';
+        create_user_info_block("forum", $result);
     }
     else{
         echo "<div class=\"result\"> нет данных </div>";
