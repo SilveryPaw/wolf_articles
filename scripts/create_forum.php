@@ -1,14 +1,15 @@
 <?php
     session_start();
     include_once 'connection.php';
+    $conn = new mysqli($host, $login, $password, $database);
+
     $uname = $_SESSION["Uname"];
-    $theme = $_POST["theme"];
-    $descr = $_POST["descr"];
+    $theme = $conn->real_escape_string($_POST["theme"]);
+    $descr = $conn->real_escape_string($_POST["descr"]);
     date_default_timezone_set("Europe/Moscow");
     $date = date("Y-m-d H:i:s");
     $sql1 = "INSERT INTO forums(forums.author_id, forums.name, forums.descr, forums.last_message) VALUES ((SELECT users.id FROM users WHERE users.username = \"$uname\"), \"$theme\", \"$descr\", \"$date\");";
     //$sql2 = "SELECT id FROM forums WHERE name = \"$_POST["theme"]\";"
-    $conn = new mysqli($host, $login, $password, $database);
 
     if($conn->connect_error)
     {
