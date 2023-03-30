@@ -6,5 +6,8 @@
         <h3>Создатель: <?php echo $row["author_name"]; ?></h3>
         <p>Последнее сообщение: <?php echo $row["last_message"]; ?>
     </div>
-    <?php } ?>
+    <?php } 
+    $page_name = 'forum';
+    include_once 'create_pages.php';
+    ?>
 </div>
