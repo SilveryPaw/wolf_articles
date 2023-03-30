@@ -25,5 +25,7 @@ function clear_html($text)
         ?></P>
         <h6>Автор статьи: <?php echo $row["author_name"]; ?></h6>
     </div>
-    <?php } ?>
+    <?php } 
+    $page_name = 'articles';
+    include_once 'create_pages.php'; ?>
 </div>

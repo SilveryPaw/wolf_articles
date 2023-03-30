@@ -11,8 +11,13 @@
                 <?php if(isset($_SESSION["Uname"]))
                 { ?>
                 <a href="forum_creation.php">Создать форум</a>
-                <?php } ?>
-                <?php include_once "scripts/get_forums.php"; ?>
+                <?php } 
+                $page = 1;
+                if(isset($_GET["page"]))
+                {
+                    $page = $_GET["page"];
+                }
+                include_once "scripts/get_forums.php"; ?>
             </div>
         </main>
         <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->

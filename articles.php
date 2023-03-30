@@ -11,7 +11,12 @@
                 <?php if(isset($_SESSION["Uname"]))
                 { ?>
                 <a href="article_creation.php">Добавить статью</a>
-                <?php } ?>
+                <?php } 
+                $page = 1;
+                if(isset($_GET["page"]))
+                {
+                    $page = $_GET["page"];
+                } ?>
                 <?php include_once "scripts/get_articles.php"; ?>
             </div>
         </main>
