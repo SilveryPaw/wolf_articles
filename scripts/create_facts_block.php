@@ -4,4 +4,4 @@ $row = $result->fetch_assoc();
 ?>
 <div class = "fact">
     <p><?php echo $row["fact"]; ?></p>
-<div>
+</div>

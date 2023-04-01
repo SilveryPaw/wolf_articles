@@ -41,11 +41,11 @@
             {
                 clear_error_messages();
                 let iscorrect = true
-                let warnings = {"empty": "Поле не может быть пустым", "different": "Пароли не совпадают"}
-                let user = document.getElementById("uname_block");
-                let pw1 = document.getElementById("pw1_block");
-                let pw2 = document.getElementById("pw2_block");
-                let mail = document.getElementById("mail_block");
+                let warnings = {"empty": "* Поле не может быть пустым", "different": "* Пароли не совпадают"}
+                let user = document.getElementById("uname_block_with_error");
+                let pw1 = document.getElementById("pw1_block_with_error");
+                let pw2 = document.getElementById("pw2_block_with_error");
+                let mail = document.getElementById("mail_block_with_error");
                 if(user.querySelector("#username").value == "")
                 {
                     add_error_message(user, warnings["empty"]);
@@ -80,26 +80,38 @@
         <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
             <div class="content">
-                <h1>Регистрация</h1>
-                <form class="data_block">
-                    <div id="uname_block" class="data_input" >
-                        <label for="username">Имя пользователя</label>
-                        <input id="username" type="text" placeholder="Введите имя пользователя"/>
+                <div class="center_block">
+                    <div class="input_form">
+                        <h1>Регистрация</h1>
+                        <div class="data_block">
+                            <div id="uname_block_with_error" class="error_possible">
+                                <div id="uname_block" class="data_input" >
+                                    <label for="username">Имя пользователя</label>
+                                    <input id="username" type="text" placeholder="Введите имя пользователя"/>
+                                </div>
+                            </div>
+                            <div id="pw1_block_with_error" class="error_possible">
+                                <div id="pw1_block" class="data_input">
+                                    <label for="password-1">Пароль</label>
+                                    <input id="password-1" type="password" placeholder="Введите пароль"/>
+                                </div>
+                            </div>
+                            <div id="pw2_block_with_error" class="error_possible">
+                                <div id="pw2_block" class="data_input">
+                                    <label for="password-1">Повтор пароля</label>
+                                    <input id="password-2" type="password" placeholder="Повторите пароль"/>
+                                </div>
+                            </div>
+                            <div id="mail_block_with_error" class="error_possible">
+                                <div id="mail_block" class="data_input">
+                                    <label for="mail">E-mail</label>
+                                    <input id="mail" type="email" placeholder="Введите электронную почту"/>
+                                </div>
+                            </div>
+                        </div>
+                        <input id="push_data" type="button" value="Зарегистрироваться" onclick="check_data()"/>
                     </div>
-                    <div id="pw1_block" class="data_input">
-                        <label for="password-1">Пароль</label>
-                        <input id="password-1" type="password" placeholder="Введите пароль"/>
-                    </div>
-                    <div id="pw2_block" class="data_input">
-                        <label for="password-1">Повтор пароля</label>
-                        <input id="password-2" type="password" placeholder="Повторите пароль"/>
-                    </div>
-                    <div id="mail_block" class="data_input">
-                        <label for="mail">E-mail</label>
-                        <input id="mail" type="email" placeholder="Введите электронную почту"/>
-                    </div>
-                    <input id="push_data" type="button" value="Зарегистрироваться" onclick="check_data()"/>
-                </form>
+                </div>
             </div>
         </main>
         <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->

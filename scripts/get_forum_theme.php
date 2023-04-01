@@ -11,7 +11,10 @@
 ?>
 
 <div class="forum_theme">
-    <h1><?php echo $row["name"]; ?></h1>
-    <p><?php echo $row["descr"]; ?></p1>
-    <p><?php echo get_author_name($row["author_id"]); ?></p>
+    <div id="forum_info">
+        <h1 id="author_name"><?php echo get_author_name($row["author_id"]); ?></h1>
+        <p id="creation_date_time"><?php echo $row["creation_date_time"]; ?></p>
+    </div>
+    <h1 id="forum_theme"><?php echo $row["name"]; ?></h1>
+    <p id="forum_descr"><?php echo $row["descr"]; ?></p1>
 </div>

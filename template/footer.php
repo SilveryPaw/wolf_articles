@@ -1,3 +1,3 @@
 <footer id="footer_block">
-    <p>world, goodbye</p>
+    <p>Тренировочный сайт</p>
 </footer>

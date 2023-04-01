@@ -8,7 +8,7 @@
         <main id="content_block">
             <div class="content">
                 <h1>Создание статьи</h1>
-                <form action="scripts/create_article.php" method="POST">
+                <form action="scripts/create_article.php" id="article_creation" method="POST">
                     <div id="name_block">
                         <label for="name">Название статьи</label>
                         <input id="name" name="name" type="text" placeholder="Введите название статьи"/>
@@ -17,7 +17,7 @@
                         <label for="text">Текст статьи</label>
                         <textarea id="text" name="text" type="text" placeholder="Введите текст статьи"></textarea>
                     </div>
-                    <input type="submit" value="Создать"/>
+                    <input id="create_button" type="submit" value="Создать"/>
                 </form>
             </div>
         </main>

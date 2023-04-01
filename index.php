@@ -16,7 +16,7 @@
                     <?php $table = "articles";
                     include 'scripts/get_random_entry.php'?>
                 </div>
-                <div class="forum_block">
+                <div id="forum_block">
                     <h1>Случайный форум</h1>
                     <?php $table = "forums";
                     include 'scripts/get_random_entry.php'?>

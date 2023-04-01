@@ -1,9 +1,313 @@
-.article, .canine{
-    border:2px;
+.articles, .canines, .forums{
+    position: relative;
+    height: 100%;
+}
+
+.content{
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 100%;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/*-----------------Flexboxes-------------------*/
+
+.articles, .canines, .forums, .canines_block, .articles_block, .forums_block, #forum_block, .content, .canine .block_name, #article_creation, #article_creation > #text_block, 
+#forum_creation > #description_block, .profile_name_block, .edit_links, #edit_entry, #edit_entry > #text_block, .input_form, .center_block, .data_block, .error_possible, 
+#change_block, .border{
+    display: flex;
+    flex-direction: column;
+}
+
+.canine a, .article_info, .result > .item, .image, .info, .message_info, #forum_info, .pages, .data_input{
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------------------------------------------*/
+
+.canines_block, .articles_block, .forums_block, #forum_block{
+    justify-content: space-between;
+    height: 100%;
+}
+
+.pages{
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.page, :is(.article, .forum, .canine) a, .result > .item a, #change_name{
+    color: black;
+    text-decoration: none;
+}
+
+.current_page{
+    color:rgb(192,192,192);
+}
+
+.page, .current_page{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*------------------------Установка границ------------------------------*/
+.article, .canine, .forum, .forum_theme, .message, .fact, .result, .input_form, .border{
+    border: 2px;
     border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(235,235,235);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.article h1{
+    border: 2px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgb(235,235,235);
+    margin-top: 5px;
+}
+/*---------------------------------------------------------------------*/
+
+:is(#create_article, #create_forum) > a {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#create_article, #create_forum{
+    padding-bottom: 20px;
+}
+
+:is(.article, .forum, .canine, .result > .item) a, #change_name{
+    transition: 0.2s linear;
+}
+
+article a, :is(.canine, .forum) a > h1{
+    font-size: 25px;
+}
+
+:is(:is(.article, .canine, .forum, .result > .item, .page) a, #change_name):hover{
+    color: rgb(255,168,18);
+}
+
+.article p, #article_text{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.image{
+    justify-content: flex-end;
 }
 
 .canine_img{
-    width: 20%;
+    border-radius: 10px;
+}
+
+.canine a, .article_info, .result > .item, .data_input{
+    justify-content: space-between;
+}
+
+.block_name, .image{
+    width: 50%;
+}
+
+.canine .block_name{
+    justify-content: center;
+    text-align: right;
+    padding-right: 25px;
+}
+
+#profile_photo, #profile_photo img, .canine_img{
+    width: 100%;
+}
+
+#profile_photo{
+    margin-top: 20px;
+}
+
+#profile_photo img, .canine_img{
     height: auto;
+}
+
+#canine_name{
+    margin-bottom: 5px;
+}
+
+#lat_name{
+    margin-top: 5px;
+}
+
+.info{
+    color: rgb(128,128,128);
+    justify-content: space-between;
+}
+
+.forum .name{
+    border: 2px;
+    border-top: 2px solid;
+    border-color: rgb(235,235,235);
+}
+
+.forum .info :is(h3, p){
+    margin-top:10px;
+    margin-bottom: 0;
+}
+
+#article_author{
+    color: rgb(128,128,128);
+    border-bottom: 2px solid rgb(235,235,235);
+    text-align: right;
+}
+
+#article_creation, #edit_entry{
+    height: 100%;
+}
+
+#article_name{
+    text-align: center;
+}
+
+#article_text, #canine_info{
+    text-indent: 1.5em;
+}
+
+#article_creation > #text_block, #forum_creation > #description_block, #article_creation > #text_block > #text, #forum_creation > #description_block > #descr, #send_message textarea,
+ #edit_entry > #text_block, #edit_entry > #text_block > #text{
+    width: 100%;
+    height: 100%;
+}
+
+#article_creation > #text_block > #text, #forum_creation > #description_block > #descr, :is(#send_message, #edit_entry) textarea{
+    resize: none;
+}
+
+#send_message{
+    padding-top: 20px;
+}
+
+#send_message p{
+    text-align: center;
+}
+
+#article_creation :is(#text, #name), #forum_creation :is(#theme, #descr), :is(#send_message, #edit_entry) textarea, #edit_entry #name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+#create_button, #send_button, #update_button, #cancel, #push_data, #change_name_button{
+    cursor: pointer;
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:10px;
+    color: white;
+    background-color:black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+#cancel{
+    text-decoration: none;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+}
+
+:is(#article_creation, #edit_entry) > #name_block #name, #forum_creation > #name_block #theme {
+    width: 100%;
+}
+
+.message_info, #forum_info{
+    justify-content: space-between;
+}
+
+.message_info, #forum_info, .result > :not(:last-child){
+    border-bottom: 2px solid rgb(235,235,235);
+}
+
+.forum_theme :is(h1, p), .comment_message, .message_info, .forum > .info, .article :is(h4, p), .forum .name, .article h1, .result > .item{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.forum_theme{
+    margin-bottom: 20px;
+}
+
+.comment_name, .comment_date, #author_name, .article_author, .date_time, #creation_date_time{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: rgb(128,128,128);
+    margin: 0;
+}
+
+.result .item_name{
+    font-size: 20px;
+}
+
+#profile_name, #change_name{
+    text-align: center;
+}
+
+#profile_name{
+    margin-bottom: 5px;
+}
+
+.edit_links{
+    justify-content: space-between;
+    padding: 10px;
+    border-left: 2px solid rgb(235,235,235);
+}
+
+.input_form, .border{
+    border-color: black;
+    align-items: center;
+}
+
+.border label{
+    margin-bottom: 10px;
+}
+
+.border #new_name{
+    width: 50%;
+    padding: 5px;
+}
+
+.center_block{
+    height: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    justify-content: center;
+}
+
+#new_name{
+    display: inline-block;
+    width: auto;
+}
+
+.data_input > *{
+    padding:5px;
+    margin: 5px;
+}
+
+.data_block{
+    box-sizing: border-box;
+}
+
+.warning{
+    color: rgb(220, 20, 60);
+}
+
+/*Блоки с главной страницы*/
+#article_block > .articles_block, #forum_block > .forums_block, #facts_block .fact{
+    padding-left: 40px;
 }

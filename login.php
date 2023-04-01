@@ -40,9 +40,9 @@
             {
                 clear_error_messages();
                 let iscorrect = true;
-                let warning = "Поле не должно быть пустым";
-                let login = document.getElementById("login_block");
-                let password = document.getElementById("password_block");
+                let warning = "* Поле не должно быть пустым";
+                let login = document.getElementById("login_block_with_error");
+                let password = document.getElementById("password_block_with_error");
                 if(login.querySelector("#login").value == "")
                 {
                     add_error_message(login, warning);
@@ -63,18 +63,26 @@
     <body id="body">
         <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
-            <form class="content">
-                <h1>Авторизация</h1>
-                <div class="data_block">
-                    <div id="login_block">
-                        <label for="login">Логин</label>
-                        <input id="login" type="text" placeholder="Введите имя пользователя или e-mail"/>
+            <div class="content">
+                <div class="center_block">
+                    <div class="input_form">
+                        <h1>Авторизация</h1>
+                        <div class="data_block">
+                            <div id="login_block_with_error" class="error_possible">
+                                <div id="login_block", class="data_input">
+                                    <label for="login">Логин</label>
+                                    <input id="login" type="text" placeholder="Введите имя пользователя или e-mail"/>
+                                </div>
+                            </div>
+                            <div id="password_block_with_error" class="error_possible">
+                                <div id="password_block", class="data_input">
+                                    <label for="password">Пароль</label>
+                                    <input id="password" type="password" placeholder="Введите пароль"/>
+                                </div>
+                            </div>
+                        </div>
+                        <input id="push_data" type="button" value="Войти" onclick="check_data()"/>
                     </div>
-                    <div id="password_block">
-                        <label for="password">Пароль</label>
-                        <input id="password" type="password" placeholder="Введите пароль"/>
-                    </div>
-                    <input id="push_data" type="button" value="Войти" onclick="check_data()"/>
                 </div>
             </div>
         </main>

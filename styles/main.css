@@ -4,6 +4,10 @@ html, body{
     font-family: 'Calibri', Times, serif;
 }
 
+p{
+    font-size: 20px;
+}
+
 #header_block, #footer_block, #content_block{
     border: 2px;
     border-style: solid;
@@ -22,8 +26,8 @@ body{
 
 #header_block{
     grid-area: header;
+    background-color: black;
 }
-
 
 #content_block{
     grid-area: content;

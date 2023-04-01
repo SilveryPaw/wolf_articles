@@ -10,7 +10,9 @@
                 <h1>Форум</h1>
                 <?php if(isset($_SESSION["Uname"]))
                 { ?>
-                <a href="forum_creation.php">Создать форум</a>
+                <div id="create_forum">
+                    <a href="forum_creation.php">Создать форум</a>
+                </div>
                 <?php } 
                 $page = 1;
                 if(isset($_GET["page"]))

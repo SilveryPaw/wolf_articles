@@ -6,9 +6,9 @@
     <body id="body">
         <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
-            <div class="content">
+            <article class="content">
                 <?php include_once 'scripts/create_article_page.php' ?>
-            </div>
+            </article>
         </main>
         <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->
     </body>

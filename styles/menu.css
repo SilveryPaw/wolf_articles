@@ -1,0 +1,36 @@
+.menu ul, .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+}
+
+.menu a{
+    text-decoration: none;
+    height: auto;
+    color: white;
+}
+
+.menu li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.menu > ul > li:first-child{
+    font-size: 40px;
+}
+
+#log_reg{
+    display: flex;
+    position: relative;
+}
+
+.menu li{
+    list-style-type: none;
+    padding: 10px;
+    font-size: 25px;
+}
