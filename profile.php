@@ -8,7 +8,10 @@
         <main id="content_block">
             <?php if(isset($_SESSION["Uname"])) {?>
             <div class="content">
-                <h1><?php echo $_SESSION["Uname"]; ?></h1>
+                <div class="profile_name_block">
+                    <h1 id="profile_name"><?php echo $_SESSION["Uname"]; ?></h1>
+                    <a id="change_name" href="change_name.php">Изменить</a>
+                </div>
                 <?php include_once "scripts/create_profile_data.php" ?>
             </div>
             <?php } else { include_once "template/error.php"; } ?>

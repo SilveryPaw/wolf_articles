@@ -12,7 +12,10 @@ function create_user_info_block($type, $result)
         {?>
         <div class = "item">
             <h3 class="item_name"><a href="/wolf_articles/show_<?php echo $type; ?>.php?id=<?php echo $row["id"]; ?>"><?php echo htmlentities($row["name"]) ?></a></h3>
-            <a href="scripts/delete_entry.php?table=<?php echo $type; ?>s&id=<?php echo $row["id"]; ?>">Удалить</a>       
+            <div class="edit_links">
+                <a href="/wolf_articles/edit_item.php?table=<?php echo $type; ?>s&id=<?php echo $row["id"]; ?>">Изменить</a>
+                <a href="scripts/delete_entry.php?table=<?php echo $type; ?>s&id=<?php echo $row["id"]; ?>">Удалить</a>   
+            </div>    
         </div>
         <?php } ?>
     </div>
