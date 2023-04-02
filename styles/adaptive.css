@@ -1,0 +1,85 @@
+@media screen and (max-width: 1000px)
+{
+
+/*--------------------------------MENU--------------------------------*/
+    .menu ul, .menu{
+        flex-direction: column;
+    }
+
+    .menu ul a{
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .menu ul li{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .menu ul a:hover{
+        background-color: #565656 ;
+    }
+
+    :is(.menu, #log_reg) :is(ul, li, a), #log_reg{
+        width: 100%;
+    }
+
+
+/*--------------------------------CONTENT--------------------------------*/
+
+    .content{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .content > div > h1, .content > h1, .input_form > h1{
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #forum_theme{
+        font-size: 60px;
+    }
+    
+    :is(.fact, .content > div) > p, #article_text *, #article_text, #article_author{
+        font-size: 40px;
+        text-indent: 1.5em;
+    }
+
+    #article_text *{
+        text-align: start;
+    }
+
+    /*.article_info, .forum > .info{
+        flex-direction: column-reverse;
+    }*/
+
+    :is(.article, .forum) :is(h4, p, h3), :is(#create_article, #create_forum, .pages) > a, .canine .block_name > h4, #contacts > h2, #change_name, .result .item_name,
+     .result .edit_links > a, #create_button, #links :is(#update_button, #cancel), input:is(#login, #password, #username, #password-1, #password-2, #mail), .data_block label,
+     #push_data, .warning, #lat_name, :is(#forum_info, .message_info) :is(h1, p), #forum_descr, .message > .comment_message, #send_button, #send_message textarea{
+        font-size: 2em;
+    }
+
+    #lat_name{
+        text-align: center;
+    }
+
+    :is(#create_article, #create_forum) a{
+        padding: 15px;
+    }
+
+    :is(.article, .forum a, .canine .block_name) h1, :is(#article_creation, #edit_entry) :is(#name_block, #text_block) > label, :is(#article_creation, #edit_entry) :is(#name, #text), 
+    #forum_creation :is(#name_block, #description_block) > label, #forum_creation :is(#theme, #descr), #forum_theme{
+        font-size: 3em;
+    }
+
+    .center_block{
+        padding:0;
+        justify-content: start;
+    }
+
+/*--------------------------------FOOTER--------------------------------*/
+    #footer_block p{
+        font-size: 40px;
+    }
+}

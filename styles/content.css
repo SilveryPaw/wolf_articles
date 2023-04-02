@@ -13,14 +13,14 @@
 
 /*-----------------Flexboxes-------------------*/
 
-.articles, .canines, .forums, .canines_block, .articles_block, .forums_block, #forum_block, .content, .canine .block_name, #article_creation, #article_creation > #text_block, 
-#forum_creation > #description_block, .profile_name_block, .edit_links, #edit_entry, #edit_entry > #text_block, .input_form, .center_block, .data_block, .error_possible, 
-#change_block, .border{
+.articles, .canines, .forums, .canines_block, .articles_block, .forums_block,  .content, .canine .block_name, #article_creation, #article_creation > #text_block, 
+#forum_creation, #forum_creation > #description_block, .profile_name_block, .edit_links, #edit_entry, #edit_entry > #text_block, .input_form, .center_block, .data_block, .error_possible, 
+#change_block, .border, #forum_block{
     display: flex;
     flex-direction: column;
 }
 
-.canine a, .article_info, .result > .item, .image, .info, .message_info, #forum_info, .pages, .data_input{
+.canine a, .article_info, .result > .item, .image, .info, .message_info, #forum_info, .pages, .data_input, #create_article, #create_forum{
     display: flex;
     flex-direction: row;
 }
@@ -78,6 +78,8 @@
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 #create_article, #create_forum{
@@ -92,7 +94,7 @@ article a, :is(.canine, .forum) a > h1{
     font-size: 25px;
 }
 
-:is(:is(.article, .canine, .forum, .result > .item, .page) a, #change_name):hover{
+:is(:is(.article, .canine, .forum, .result > .item) a, .page, #change_name):hover{
     color: rgb(255,168,18);
 }
 
