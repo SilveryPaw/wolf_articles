@@ -7,5 +7,5 @@ $text = $_POST["text"];
 $sql = "UPDATE forums SET name = \"$name\", descr=\"$text\" WHERE id=$id";
 $conn->query($sql);
 $conn->close();
-header("Location: /wolf_articles/profile.php");
+header("Location: ../profile.php");
 ?>

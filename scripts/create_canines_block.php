@@ -3,7 +3,7 @@
         <?php foreach($result as $row)
         {?>
         <div class = "canine">
-            <a href="/wolf_articles/show_canine.php?id=<?php echo $row["id"]; ?>">
+            <a href="show_canine.php?id=<?php echo $row["id"]; ?>">
                 <div class="block_name">
                     <h1><?php echo $row["name"]; ?></h1>
                     <h4><?php echo $row["lat_name"]; ?></h4>

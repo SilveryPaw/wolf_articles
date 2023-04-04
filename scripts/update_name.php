@@ -8,5 +8,5 @@ $sql = "UPDATE users SET username = \"$new_name\" WHERE username = \"$name\"";
 $conn->query($sql);
 $conn->close();
 $_SESSION["Uname"] = $new_name;
-header("Location: /wolf_articles/profile.php");
+header("Location: ../profile.php");
 ?>

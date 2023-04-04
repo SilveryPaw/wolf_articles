@@ -15,5 +15,5 @@ $conn->query($sql);
 $sql = "UPDATE `forums` SET `last_message` = \"$date\" WHERE `forums`.`id` = $id;";
 $conn->query($sql);
 
-header("Location: /wolf_articles/show_forum.php?id=$id");
+header("Location: ../show_forum.php?id=$id");
 ?>

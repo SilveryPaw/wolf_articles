@@ -15,6 +15,6 @@
 
     $conn->query($sql1);
 
-    header("Location: /wolf_articles/articles.php");
+    header("Location: ../articles.php");
     $conn->close();
 ?>

@@ -6,5 +6,5 @@ $conn = new mysqli($host, $login, $password, $database);
 $sql = "DELETE FROM $table WHERE id=$id";
 $conn->query($sql);
 $conn->close();
-header("Location: /wolf_articles/profile.php");
+header("Location: ../profile.php");
 ?>

@@ -8,7 +8,7 @@
             }
             else
             { ?>
-                <a class="page" href="/wolf_articles/<?php echo $page_name; ?>.php?page=<?php echo ($i + 1); ?>"><?php echo ($i + 1); ?></a>
+                <a class="page" href="<?php echo $page_name; ?>.php?page=<?php echo ($i + 1); ?>"><?php echo ($i + 1); ?></a>
             <?php
             }
         } ?>

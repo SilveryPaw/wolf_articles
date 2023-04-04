@@ -8,5 +8,5 @@ $sql = "UPDATE articles SET name = \"$name\", article_text=\"$text\" WHERE id=$i
 echo $id;
 $conn->query($sql);
 $conn->close();
-header("Location: /wolf_articles/profile.php");
+header("Location: ../profile.php");
 ?>

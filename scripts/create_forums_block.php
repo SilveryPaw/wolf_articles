@@ -8,7 +8,7 @@
                     <p>Последнее сообщение: <?php echo $row["last_message"]; ?>
                 </div>
                 <div class="name">
-                    <a href="/wolf_articles/show_forum.php?id=<?php echo $row["id"]; ?>"><h1><?php echo $row["name"]; ?></h1></a>
+                    <a href="show_forum.php?id=<?php echo $row["id"]; ?>"><h1><?php echo $row["name"]; ?></h1></a>
                 </div>
             </div>
         <?php } ?>

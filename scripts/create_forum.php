@@ -21,6 +21,6 @@
     $sql3 = "CREATE TABLE `_forum_$id` (id INT AUTO_INCREMENT PRIMARY KEY, author_id INT NOT NULL DEFAULT 0, message TEXT NOT NULL, date_time DATETIME NOT NULL);";
     $conn->query($sql3);
 
-    header("Location: /wolf_articles/forum.php");
+    header("Location: ../forum.php");
     $conn->close();
 ?>

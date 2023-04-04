@@ -18,7 +18,7 @@ function clear_html($text)
                     <h4 class="article_author"><?php echo $row["author_name"]; ?></h4>
                     <p class="date_time"><?php echo $row["date_time"]; ?></p>
                 </div>
-                <h1><a href="/wolf_articles/show_article.php?id=<?php echo $row["id"]; ?>"><?php echo htmlentities($row["name"]) ?></a></h1>
+                <h1><a href="show_article.php?id=<?php echo $row["id"]; ?>"><?php echo htmlentities($row["name"]) ?></a></h1>
                 <p><?php 
                 $art_text = clear_html($row["article_text"]);
                 if(strlen($art_text) > 1000)
