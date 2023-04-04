@@ -1,0 +1,12 @@
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author_id` (`author_id`);
+ALTER TABLE `canines`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `facts`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `forums`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author_id` (`author_id`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);

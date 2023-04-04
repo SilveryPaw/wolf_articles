@@ -1,0 +1,7 @@
+CREATE TABLE `canines` (
+  `id` int(11) NOT NULL,
+  `name` tinytext COLLATE utf8mb4_unicode_ci,
+  `lat_name` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `other_info` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_src` tinytext COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

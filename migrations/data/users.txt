@@ -1,0 +1,8 @@
+INSERT INTO `users` (`id`, `username`, `pword`, `favorites`, `mail`) VALUES
+(1, 'SilveryPaw', 'AjgfS6&hs^k', NULL, 'sir.sinitzin2012@yandex.ru'),
+(2, 'Andreyka', 'FHWJHFjdawhd', NULL, NULL),
+(4, 'Woiify', 'jason2323', NULL, 'Wowowo@mail.ru'),
+(5, 'Marra', '$2y$10$yCDjSWcZcupUTxGeuScx8edqzl.ubxSStv2nIcgzDW/1mSVMdukge', NULL, 'sasasa@mail.ru'),
+(6, 'Johny_Fritz', '$2y$10$Ou8pZpkyJ2MLxDoJPgVw.uRBu4febLTJosc2KQynog4/U//uuHrVW', NULL, 'sir.sinitzin2012@mail.ru'),
+(7, 'Artifact', '$2y$10$ckzSEAux3y8o2sT1ieHi4.PlcsaHa7E1g71X1l3l8fXhe7PpOugnq', NULL, 'TestingMail.com'),
+(8, 'Saharov', '$2y$10$jIDX0DtC1QcqpVsZT.Q2leRaiBWetvxo/zJ6b6VsYUmcnKMdP549O', NULL, 'Yantar@vizhigatel.da');
