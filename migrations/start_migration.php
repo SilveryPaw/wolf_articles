@@ -8,12 +8,12 @@ function get_multi_query($directory)
     $files = array_diff(scandir($directory), array('..', '.'));
     foreach($files as $file)
     {
-        $str .= file_get_contents(__DIR__ . "/" . $directory . "/" . $file);
+        $str .= file_get_contents($directory . "/" . $file);
     }
     return $str;
 }
 
-$sql = file_get_contents(__DIR__ . "/structure/articles.txt");
+//$sql = file_get_contents(__DIR__ . "/structure/articles.txt");
 
 $conn = new mysqli($host, $login, $password);
 if($conn->connect_error)
@@ -36,7 +36,7 @@ else
 $conn = new mysqli($host, $login, $password, $database);
 $migration->set_connection($conn);
 
-$sql = get_multi_query("structure");
+$sql = get_multi_query(__DIR__ . "/structure");
 echo "Создание структуры...";
 if($migration->execute_multi_query($sql))
 {
@@ -47,7 +47,7 @@ else
     die ("Ошибка!");
 }
 
-$sql = get_multi_query("data");
+$sql = get_multi_query(__DIR__ . "/data");
 echo "Добавление записей...";
 if($migration->execute_multi_query($sql))
 {
@@ -58,7 +58,7 @@ else
     die ("Ошибка!");
 }
 
-$sql = get_multi_query("configuration");
+$sql = get_multi_query(__DIR__ . "/configuration");
 echo "Настройка...";
 if($migration->execute_multi_query($sql))
 {
