@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include_once 'connection.php';
+    include_once __DIR__ . '/connection.php';
+    include_once __DIR__ . '/redirect_by_path.php';
     $conn = new mysqli($host, $login, $password, $database);
 
     $uname = $_SESSION["Uname"];
@@ -21,6 +22,8 @@
     $sql3 = "CREATE TABLE `_forum_$id` (id INT AUTO_INCREMENT PRIMARY KEY, author_id INT NOT NULL DEFAULT 0, message TEXT NOT NULL, date_time DATETIME NOT NULL);";
     $conn->query($sql3);
 
-    header("Location: ../forum.php");
+    $dir = __DIR__ . "/../forum.php";
+    redirect_by_path($dir);
+    //header("Location: ../forum.php");
     $conn->close();
 ?>

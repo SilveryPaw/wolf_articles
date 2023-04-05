@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include_once "template/meta_data.php" ?>
+        <?php include_once __DIR__ . "/template/meta_data.php" ?>
     </head>
     <body id="body">
-        <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
+        <?php include_once __DIR__ . "/template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
             <div class="content">
                 <div id="forum_block">
                     <div>
-                        <?php include_once 'scripts/get_forum_theme.php'; ?>
-                        <?php include_once 'scripts/get_forum_messages.php'?>
+                        <?php include_once __DIR__ . '/scripts/get_forum_theme.php'; ?>
+                        <?php include_once __DIR__ . '/scripts/get_forum_messages.php'?>
                     </div>
                     <div id="send_message">
                         <?php if(isset($_SESSION["Uname"])){ ?>
@@ -25,6 +25,6 @@
                 </div>
             </div>
         </main>
-        <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->
+        <?php include_once __DIR__ . "/template/footer.php"; ?> <!--Подключаем подвал-->
     </body>
 </html>

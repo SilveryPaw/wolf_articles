@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include_once 'connection.php';
+    include_once __DIR__ . '/connection.php';
+    include_once __DIR__ . '/redirect_by_path.php';
     $conn = new mysqli($host, $login, $password, $database);
 
     $uname = $_SESSION["Uname"];
@@ -15,6 +16,9 @@
 
     $conn->query($sql1);
 
-    header("Location: ../articles.php");
+    $dir = __DIR__ . "/../articles.php";
+    redirect_by_path($dir);
+    
+    //header("Location: $dir");
     $conn->close();
 ?>

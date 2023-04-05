@@ -1,6 +1,6 @@
 <?php
-include_once '../scripts/connection.php';
-include_once 'migrations.php';
+include_once __DIR__ . '/../scripts/connection.php';
+include_once __DIR__ . '/migrations.php';
 
 function get_multi_query($directory)
 {
@@ -8,12 +8,12 @@ function get_multi_query($directory)
     $files = array_diff(scandir($directory), array('..', '.'));
     foreach($files as $file)
     {
-        $str .= file_get_contents($directory . "/" . $file);
+        $str .= file_get_contents(__DIR__ . "/" . $directory . "/" . $file);
     }
     return $str;
 }
 
-$sql = file_get_contents("structure/articles.txt");
+$sql = file_get_contents(__DIR__ . "/structure/articles.txt");
 
 $conn = new mysqli($host, $login, $password);
 if($conn->connect_error)

@@ -1,6 +1,6 @@
 <?php 
-    include_once 'connection.php';
-    include_once 'get_author_name.php';
+    include_once __DIR__ . '/connection.php';
+    include_once __DIR__ . '/get_author_name.php';
     $id = $_GET["id"];
     $sql = "SELECT * FROM forums WHERE id = \"$id\"";
     $conn = new mysqli($host, $login, $password, $database);

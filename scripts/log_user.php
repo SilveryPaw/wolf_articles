@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include_once 'connection.php';
+include_once __DIR__ . '\connection.php';
 $conn = new mysqli ($host, $login, $password, $database);
 
 function is_correct()

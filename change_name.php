@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include_once "template/meta_data.php" ?>
+        <?php include_once __DIR__ . "/template/meta_data.php" ?>
     </head>
     <body id="body">
-        <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
+        <?php include_once __DIR__ . "/template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
             <div class="content">
-                <form class="center_block" method="POST" action="scripts/update_name.php">
+                <form class="center_block" method="POST" action="<?php echo $GLOBALS["absolute_path"];?>/scripts/update_name.php">
                     <div class="border">
                         <h1>Изменить имя</h1>
                         <label for="new_name">Новое имя пользователя</label>
@@ -17,6 +17,6 @@
                 </form>
             </div>
         </main>
-        <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->
+        <?php include_once __DIR__ . "/template/footer.php"; ?> <!--Подключаем подвал-->
     </body>
 </html>

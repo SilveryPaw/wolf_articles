@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include_once "template/meta_data.php" ?><!--Подключаем метаданные(стили, кодировку)-->
+        <?php include_once __DIR__ . "/template/meta_data.php" ?><!--Подключаем метаданные(стили, кодировку)-->
         <script src="scripts/error_messages.js"></script>
         <script>
             function send_data(name, pword, mail)
@@ -77,7 +77,7 @@
         </script>
     </head>
     <body id="body">
-        <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
+        <?php include_once __DIR__ . "/template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
             <div class="content">
                 <div class="center_block">
@@ -114,6 +114,6 @@
                 </div>
             </div>
         </main>
-        <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->
+        <?php include_once __DIR__ . "/template/footer.php"; ?> <!--Подключаем подвал-->
     </body>
 </html>

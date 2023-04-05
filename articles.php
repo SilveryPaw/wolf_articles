@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include_once "template/meta_data.php" ?><!--Подключаем метаданные(стили, кодировку)-->
+        <?php include_once __DIR__ . "/template/meta_data.php" ?><!--Подключаем метаданные(стили, кодировку)-->
     </head>
     <body id="body">
-        <?php include_once "template/header.php"; ?> <!--Подключаем менюшку-->
+        <?php include_once __DIR__ . "/template/header.php"; ?> <!--Подключаем менюшку-->
         <main id="content_block">
             <div class="content">
                 <div class="page_name"><h1>Статьи</h1></div>
@@ -19,9 +19,9 @@
                 {
                     $page = $_GET["page"];
                 } ?>
-                <?php include_once "scripts/get_articles.php"; ?>
+                <?php include_once __DIR__ . "/scripts/get_articles.php"; ?>
             </div>
         </main>
-        <?php include_once "template/footer.php"; ?> <!--Подключаем подвал-->
+        <?php include_once __DIR__ . "/template/footer.php"; ?> <!--Подключаем подвал-->
     </body>
 </html>
