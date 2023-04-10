@@ -1,6 +1,6 @@
 <?php 
-include_once __DIR__ . "\connection.php";
-include_once __DIR__ . "\redirect_by_path.php";
+include_once __DIR__ . "/connection.php";
+include_once __DIR__ . "/redirect_by_path.php";
 session_start();
 date_default_timezone_set("Europe/Moscow");
 
@@ -16,7 +16,7 @@ $conn->query($sql);
 $sql = "UPDATE `forums` SET `last_message` = \"$date\" WHERE `forums`.`id` = $id;";
 $conn->query($sql);
 
-$dir = __DIR__ . "\..\show_forum.php?id=$id";
+$dir = __DIR__ . "/../show_forum.php?id=$id";
 redirect_by_path($dir);
 //header("Location: ../show_forum.php?id=$id");
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '\connection.php';
+include_once __DIR__ . '/connection.php';
 
 function convert_to_html($text){
     return str_replace(PHP_EOL, '<br>', $text);

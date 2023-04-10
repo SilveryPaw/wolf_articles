@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '\connection.php';
+include_once __DIR__ . '/connection.php';
 $username = $_SESSION["Uname"];
 $sql_articles = "SELECT * FROM `articles` WHERE `articles`.`author_id` = (SELECT `users`.`id` FROM `users` WHERE `users`.`username` = \"$username\")";
 $sql_forums = "SELECT * FROM `forums` WHERE `forums`.`author_id` = (SELECT `users`.`id` FROM `users` WHERE `users`.`username` = \"$username\")";

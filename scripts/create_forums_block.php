@@ -8,13 +8,13 @@
                     <p>Последнее сообщение: <?php echo $row["last_message"]; ?>
                 </div>
                 <div class="name">
-                    <a href="<?php echo $GLOBALS["absolute_path"] ?>\show_forum.php?id=<?php echo $row["id"]; ?>"><h1><?php echo $row["name"]; ?></h1></a>
+                    <a href="<?php echo $GLOBALS["absolute_path"] ?>/show_forum.php?id=<?php echo $row["id"]; ?>"><h1><?php echo $row["name"]; ?></h1></a>
                 </div>
             </div>
         <?php } ?>
     </div>
     <?php
     $page_name = 'forum';
-    include_once __DIR__ . '\create_pages.php';
+    include_once __DIR__ . '/create_pages.php';
     ?>
 </div>

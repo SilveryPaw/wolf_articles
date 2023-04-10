@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '\connection.php';
+include_once __DIR__ . '/connection.php';
 $conn = new mysqli($host, $login, $password, $database);
 if(($table == "articles")||($table == "forums"))
 {
@@ -19,13 +19,13 @@ if($result = mysqli_query($conn, $sql))
     $pages_count = 0;
     switch($table){
         case "articles":
-            include_once __DIR__ . '\create_articles_block.php';
+            include_once __DIR__ . '/create_articles_block.php';
             break;
         case "forums":
-            include_once __DIR__ . '\create_forums_block.php';
+            include_once __DIR__ . '/create_forums_block.php';
             break;
         case "facts":
-            include_once __DIR__ . '\create_facts_block.php';
+            include_once __DIR__ . '/create_facts_block.php';
             break;
     }
 }

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '\connection.php';
+include_once __DIR__ . '/connection.php';
 $table = $_GET["table"];
 $id = $_GET["id"];
 $conn = new mysqli($host, $login, $password, $database);
